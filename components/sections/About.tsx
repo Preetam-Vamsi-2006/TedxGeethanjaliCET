@@ -90,48 +90,7 @@ export default function About() {
           ))}
         </div>
 
-        {/* Why TEDx Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 p-8 rounded-2xl bg-black border border-ted/50"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-ted">Why TEDXGeethanjaliCET?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Inspire Innovation",
-                description:
-                  "Discover breakthrough ideas from industry leaders and innovators.",
-              },
-              {
-                title: "Build Community",
-                description:
-                  "Network with like-minded individuals passionate about ideas worth spreading.",
-              },
-              {
-                title: "Amplify Voices",
-                description:
-                  "Give a platform to talented speakers and thought leaders from our community.",
-              },
-              {
-                title: "Create Impact",
-                description:
-                  "Foster positive change through knowledge sharing and collaborative dialogue.",
-              },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="p-4 hover:border-ted/50 border border-transparent rounded-lg transition-colors duration-300"
-                whileHover={{ x: 5 }}
-              >
-                <h4 className="font-semibold text-white mb-2">{item.title}</h4>
-                <p className="text-white/70 text-sm">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );
