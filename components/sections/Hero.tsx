@@ -158,10 +158,10 @@ export default function Hero() {
       />
 
       {/* Blueprint - Single SVG with animated clip paths */}
-      <div className="absolute inset-0 flex justify-center items-end z-10 pointer-events-none sm:pt-48 pt-20 sm:scale-100 scale-125">
+      <div className="absolute inset-0 flex justify-center items-center z-10 pointer-events-none sm:pt-48 pt-32">
         <svg
           viewBox="0 0 1167 341"
-          className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-96"
+          className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-64"
           preserveAspectRatio="xMidYMid meet"
           xmlns="http://www.w3.org/2000/svg"
         >
