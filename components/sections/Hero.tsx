@@ -85,7 +85,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full sm:min-h-screen min-h-[80vh] flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: '#050505' }}
     >
       {/* Animated background circles */}
@@ -158,10 +158,10 @@ export default function Hero() {
       />
 
       {/* Blueprint - Single SVG with animated clip paths */}
-      <div className="absolute inset-0 flex justify-center items-center z-10 pointer-events-none sm:pt-48 pt-16">
+      <div className="absolute inset-0 flex justify-center items-center z-10 pointer-events-none sm:pt-48 pt-24">
         <svg
           viewBox="0 0 1167 341"
-          className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-80"
+          className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-96"
           preserveAspectRatio="xMidYMid meet"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -207,7 +207,7 @@ export default function Hero() {
       {/* Theme Text Section */}
       {showTheme && (
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-start z-20 pointer-events-none sm:pt-24 pt-20"
+          className="absolute inset-0 flex flex-col items-center justify-start z-20 pointer-events-none sm:pt-24 pt-12"
           initial={{ opacity: 0, y: 40, scale: 0.92 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
