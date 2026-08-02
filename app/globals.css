@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap");
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f1620 0%, #1a2a4a 50%, #0d1b2a 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Mobile viewport fixes */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  input, textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EB0028;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B80020;
+}
+
+/* Selection */
+::selection {
+  background: #EB0028;
+  color: white;
+}
+
+/* Custom cursor */
+.cursor-custom {
+  cursor: none;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Text reveal */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+}
+
+/* Image reveal */
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Split text */
+.split-text {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.split-text span {
+  display: inline-block;
+}
+
+/* Magnetic buttons */
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.magnetic-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+@media (hover: hover) {
+  .magnetic-btn:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Ripple effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ripple:active::after {
+  animation: ripple-animation 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Smooth transitions */
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift {
+    @apply transition-smooth;
+  }
+
+  @media (hover: hover) {
+    .hover-lift {
+      @apply hover:-translate-y-1;
+    }
+
+    .hover-glow {
+      @apply hover:shadow-lg hover:shadow-red-500/50;
+    }
+  }
+
+  /* Text positioning utilities */
+  .translate-up-sm {
+    @apply -translate-y-2;
+  }
+
+  .translate-up-md {
+    @apply -translate-y-4;
+  }
+
+  .translate-up-lg {
+    @apply -translate-y-8;
+  }
+
+  .translate-up-xl {
+    @apply -translate-y-12;
+  }
+
+  .translate-up-2xl {
+    @apply -translate-y-16;
+  }
+  
+  /* Mobile-friendly button sizing */
+  @media (max-width: 640px) {
+    button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    input, textarea, select {
+      min-height: 44px;
+      font-size: 16px; /* Prevents auto-zoom on iOS */
+    }
+  }
+}

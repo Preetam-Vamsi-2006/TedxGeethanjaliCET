@@ -1,0 +1,39 @@
+{
+  "name": "tedx-gcet",
+  "version": "1.0.0",
+  "description": "TEDx Geethanjali College of Engineering and Technology - Premium Website",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.3.3",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "tailwindcss": "3.3.6",
+    "postcss": "8.4.32",
+    "autoprefixer": "10.4.16",
+    "framer-motion": "10.16.4",
+    "gsap": "3.12.2",
+    "lucide-react": "0.263.1",
+    "react-hook-form": "7.48.0",
+    "zod": "3.22.4",
+    "@hookform/resolvers": "3.3.4",
+    "react-countup": "6.5.0",
+    "react-intersection-observer": "9.10.3",
+    "clsx": "2.0.0",
+    "tailwind-merge": "2.2.0",
+    "class-variance-authority": "0.7.0",
+    "@emailjs/browser": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.6"
+  }
+}
+
