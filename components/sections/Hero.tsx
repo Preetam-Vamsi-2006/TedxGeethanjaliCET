@@ -207,14 +207,14 @@ export default function Hero() {
       {/* Theme Text Section */}
       {showTheme && (
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-start z-20 pointer-events-none pt-24"
+          className="absolute inset-0 flex flex-col items-center justify-start z-20 pointer-events-none sm:pt-24 pt-16"
           initial={{ opacity: 0, y: 40, scale: 0.92 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
         >
           <div className="text-center" style={{ perspective: "1000px" }}>
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg"
+              className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 drop-shadow-lg"
               initial={{ 
                 opacity: 1,
                 scale: 8,
