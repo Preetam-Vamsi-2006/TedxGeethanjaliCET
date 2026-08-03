@@ -161,7 +161,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex justify-center items-center z-10 pointer-events-none sm:pt-48 pt-2">
         <svg
           viewBox="0 0 1167 341"
-          className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-64"
+          className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-80"
           preserveAspectRatio="xMidYMid meet"
           xmlns="http://www.w3.org/2000/svg"
         >
