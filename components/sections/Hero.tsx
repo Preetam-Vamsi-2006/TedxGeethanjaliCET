@@ -239,8 +239,8 @@ export default function Hero() {
               }}
             >
               <span className="text-[#E0272C] font-black">TED</span>
-              <span className="text-white font-black">x</span>
-              <span className="text-white font-black ml-2">Geethanjali CET</span>
+              <span className="text-[#E0272C] font-black">x</span>
+              <span className="text-white font-black">Geethanjali CET</span>
             </motion.h1>
             
             
