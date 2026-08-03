@@ -85,7 +85,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: '#050505' }}
     >
       {/* Animated background circles */}
