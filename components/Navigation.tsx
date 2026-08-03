@@ -64,8 +64,8 @@ export default function Navigation() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg sm:text-2xl font-bold text-ted whitespace-nowrap"
             >
-              TEDx<span className="hidden sm:inline">GeethanjaliCET</span>
-              <span className="sm:hidden">GCET</span>
+              TEDx<span className="hidden sm:inline">Geethanjali CET</span>
+              <span className="sm:hidden">Geethanjali CET</span>
             </motion.div>
           </Link>
 
