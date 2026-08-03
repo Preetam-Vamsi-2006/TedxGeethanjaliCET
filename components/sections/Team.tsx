@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { Linkedin, Instagram } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export default function Team() {
@@ -12,6 +12,7 @@ export default function Team() {
 
   const teamCategories = [
     { id: "core", label: "Core Team" },
+    { id: "faculty", label: "Faculty" },
     { id: "branding", label: "Branding & Outreach" },
     { id: "curation", label: "Curation & Hospitality" },
     { id: "logistics", label: "Logistics & Operations" },
@@ -24,21 +25,23 @@ export default function Team() {
         name: "K.Suhitha",
         role: "Organizer",
         image: "/team/suhitha.jpg",
-        social: { linkedin: "https://www.linkedin.com/in/ksuhitha/", instagram: "https://www.instagram.com/suhithareddy_06/" },
+        social: { linkedin: "https://www.linkedin.com/in/ksuhitha/" },
       },
       {
         id: 2,
         name: "K.Gunjana",
         role: "Co-organizer",
         image: "/team/gunjana.jpg",
-        social: { linkedin: "https://www.linkedin.com/in/gunjana-kachuwah/", instagram: "https://www.instagram.com/mni_gunjana/" },
+        social: { linkedin: "https://www.linkedin.com/in/gunjana-kachuwah/" },
       },
+    ],
+    faculty: [
       {
-        id: 3,
+        id: 1,
         name: "Ms.Preeti Prasada(Senior Assistant Professor)",
         role: "Faculty Co-ordinator",
         image: "/team/faculty.jpeg",
-        social: { linkedin: "#", instagram: "#" },
+        social: { linkedin: "https://www.linkedin.com/in/preeti-prasada-gcet-6648232a2?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
       }
     ],
     branding: [
@@ -47,35 +50,35 @@ export default function Team() {
         name: "Akash",
         role: "Branding",
         image: "/team/akash.JPG",
-        social: { linkedin: "https://www.linkedin.com/in/akash-reddy-nalla-601613327/", instagram: "https://www.instagram.com/aakash.reddyyy/" },
+        social: { linkedin: "https://www.linkedin.com/in/akash-reddy-nalla-601613327/" },
       },
       {
         id: 2,
         name: "Hansika",
         role: "Outreach",
         image: "/team/hansika.jpg",
-        social: { linkedin: "http://www.linkedin.com/in/hansika-belgavi", instagram: "https://www.instagram.com/hansika.bel/" },
+        social: { linkedin: "http://www.linkedin.com/in/hansika-belgavi" },
       },
       {
         id: 3,
         name: "Sai Vamshi",
         role: "Social Media Manager",
         image: "/team/saivamshi.JPG",
-        social: { linkedin: "https://www.linkedin.com/in/sai-vamshi-96a78b28a/", instagram: "https://www.instagram.com/me_.vamshi/" },
+        social: { linkedin: "https://www.linkedin.com/in/sai-vamshi-96a78b28a/" },
       },
       {
         id: 4,
         name: "J. Ruthpriyadarshini",
         role: "Sponsers",
         image: "/team/Ruth.JPG",
-        social: { linkedin: "https://www.linkedin.com/in/ruthpriyadarshini-jella/", instagram: "https://www.instagram.com/ruthzrealm/" },
+        social: { linkedin: "https://www.linkedin.com/in/ruthpriyadarshini-jella/" },
       },
       {
         id: 5,
         name: "G.Preetham Vamshi",
         role: "Tech Lead",
         image: "/team/vamshi.JPG",
-        social: { linkedin: "https://www.linkedin.com/in/gollapalli-preetam-vamsi", instagram: "https://www.instagram.com/vamshi_sharma06/" },
+        social: { linkedin: "https://www.linkedin.com/in/gollapalli-preetam-vamsi" },
       },
     ],
     curation: [
@@ -84,14 +87,14 @@ export default function Team() {
         name: "Saketh",
         role: "Curation Head",
         image: "/team/saketh.jpg",
-        social: { linkedin: "https://www.linkedin.com/in/saketh-rao-70165b306/", instagram: "#" },
+        social: { linkedin: "https://www.linkedin.com/in/saketh-rao-70165b306/" },
       },
       {
         id: 2,
         name: "Harsh jha",
         role: "Hospitality Manager",
         image: "/team/harsh.JPG",
-        social: { linkedin: "http://www.linkedin.com/in/harsh-jha-883aa5327", instagram: "https://www.instagram.com/markjhaash/" },
+        social: { linkedin: "http://www.linkedin.com/in/harsh-jha-883aa5327" },
       },
     ],
     logistics: [
@@ -100,21 +103,21 @@ export default function Team() {
         name: "Sam Benedict",
         role: "Logistics Lead",
         image: "/team/sam.JPG",
-        social: { linkedin: "#", instagram: "https://www.instagram.com/sapphireprince__/" },
+        social: { linkedin: "#" },
       },
       {
         id: 2,
         name: " K. Jishnu Vardhan Naidu",
         role: "Operations Manager",
         image: "/team/jishnu.JPG",
-        social: { linkedin: "https://www.linkedin.com/in/kommi-jishnu-vardhan-naidu-568b4826b?utm_source=share_via&utm_content=profile&utm_medium=member_android", instagram: "https://www.instagram.com/9999_jishnu/" },
+        social: { linkedin: "https://www.linkedin.com/in/kommi-jishnu-vardhan-naidu-568b4826b?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
       },
       {
         id: 3,
         name: "S. Nyneeta Rao",
         role: "",
         image: "/team/Nyneeta.jpeg",
-        social: { linkedin: "https://www.linkedin.com/in/nyneeta-rao/", instagram: "#" },
+        social: { linkedin: "https://www.linkedin.com/in/nyneeta-rao/" },
       },
     ],
   };
@@ -211,16 +214,6 @@ export default function Team() {
                       aria-label="LinkedIn"
                     >
                       <Linkedin size={20} />
-                    </motion.a>
-                    <motion.a
-                      href={member.social.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.2 }}
-                      className="inline-block p-2 bg-ted/20 text-ted rounded-full hover:bg-ted hover:text-white transition-all"
-                      aria-label="Instagram"
-                    >
-                      <Instagram size={20} />
                     </motion.a>
                   </div>
                 </div>
