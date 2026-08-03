@@ -40,6 +40,7 @@ lerna-debug.log*
 
 # Local env files - NEVER COMMIT ENV FILES
 .env
+.env.example
 .env.local
 .env.*.local
 .env.development.local
