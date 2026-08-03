@@ -235,8 +235,8 @@ export default function Hero() {
                 transformOrigin: "center center",
               }}
             >
-              <span className="text-[#E0272C]">TEDX</span>
-              <span className="text-white">GeethanjaliCET</span>
+              <span className="text-[#E0272C]">TEDx</span>
+              <span className="text-white">Geethanjali CET</span>
             </motion.h1>
             
             
