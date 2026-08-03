@@ -207,7 +207,7 @@ export default function Hero() {
       {/* Theme Text Section */}
       {showTheme && (
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-start z-20 pointer-events-none sm:pt-24 pt-20"
+          className="absolute inset-0 flex flex-col items-center justify-start z-20 pointer-events-none sm:pt-24 pt-48"
           initial={{ opacity: 0, y: 40, scale: 0.92 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
