@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/data";
 
 export default function Footer() {
@@ -22,7 +22,6 @@ export default function Footer() {
 
   const socialIcons = [
     { icon: Instagram, url: SITE_CONFIG.socialLinks.instagram, label: "Instagram" },
-    { icon: Twitter, url: SITE_CONFIG.socialLinks.twitter, label: "Twitter" },
     { icon: Facebook, url: SITE_CONFIG.socialLinks.facebook, label: "Facebook" },
     { icon: Linkedin, url: SITE_CONFIG.socialLinks.linkedin, label: "LinkedIn" },
   ];
