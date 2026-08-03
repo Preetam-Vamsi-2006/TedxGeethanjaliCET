@@ -37,40 +37,40 @@ export default function Hero() {
     requestAnimationFrame(() => {
       const tl = gsap.timeline({ delay: 0.5 });
 
+      // Theme text FIRST
+      tl.call(() => {
+        setShowTheme(true);
+      }, [], 0);
+
       // Animate left clip from 0 to 583.5 (full left half)
       tl.to(leftRectRef.current, {
         attr: { width: 583.5 },
         duration: 2.8,
         ease: 'power4.out',
-      }, 0);
+      }, 1.5);
 
       // Animate right clip x position from 1167 (right edge) to 583.5 (center)
       tl.to(rightRectRef.current, {
         attr: { x: 583.5 },
         duration: 2.8,
         ease: 'power4.out',
-      }, 0);
+      }, 1.5);
 
       // Glow
       tl.to(blueprintGlowRef.current, {
         opacity: 1,
         duration: 0.2,
-      }, 2.8);
+      }, 4.3);
 
       tl.to(blueprintGlowRef.current, {
         opacity: 0,
         duration: 0.4,
-      }, 3.0);
-
-      // Theme text
-      tl.call(() => {
-        setShowTheme(true);
-      }, [], 3.4);
+      }, 4.5);
 
       tl.to(blueprintGlowRef.current, {
         opacity: 0.15,
         duration: 0.8,
-      }, 3.4);
+      }, 4.7);
     });
   }, []);
 
@@ -214,7 +214,7 @@ export default function Hero() {
         >
           <div className="text-center" style={{ perspective: "1000px" }}>
             <motion.h1 
-              className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg"
+              className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight leading-tight"
               initial={{ 
                 opacity: 1,
                 scale: 8,
@@ -233,10 +233,14 @@ export default function Hero() {
               }}
               style={{
                 transformOrigin: "center center",
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 900,
+                letterSpacing: "0.02em",
               }}
             >
-              <span className="text-[#E0272C]">TEDx</span>
-              <span className="text-white">Geethanjali CET</span>
+              <span className="text-[#E0272C] font-black">TED</span>
+              <span className="text-white font-black">x</span>
+              <span className="text-white font-black ml-2">Geethanjali CET</span>
             </motion.h1>
             
             
