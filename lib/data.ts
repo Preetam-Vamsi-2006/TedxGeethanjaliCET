@@ -7,10 +7,10 @@ export const SITE_CONFIG = {
   phone: "+91 XXXXX XXXXX",
   email: "tedx@geethanjali.edu.in",
   socialLinks: {
-    instagram: "https://www.instagram.com/tedxgcet",
+    instagram: "https://www.instagram.com/s.o._o.n_?igsh=MXRhNGlzOTRsc3JucA==",
     twitter: "https://twitter.com/tedxgcet",
     facebook: "https://www.facebook.com/share/19Hv5tFt9n/",
-    linkedin: "https://www.linkedin.com/company/tedxgcet",
+    linkedin: "https://www.linkedin.com/company/tedxgeethanjalicet/",
   },
 };
 
