@@ -85,7 +85,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative w-full min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[65vh] sm:min-h-screen flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: '#050505' }}
     >
       {/* Animated background circles */}
@@ -158,7 +158,7 @@ export default function Hero() {
       />
 
       {/* Blueprint - Single SVG with animated clip paths */}
-      <div className="absolute inset-0 flex justify-center items-center z-10 pointer-events-none sm:pt-48 pt-8">
+      <div className="absolute inset-0 flex justify-center items-center z-10 pointer-events-none sm:pt-48 pt-16">
         <svg
           viewBox="0 0 1167 341"
           className="sm:w-[95vw] w-full sm:max-w-6xl max-w-none px-2 sm:h-auto h-64"
