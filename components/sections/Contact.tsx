@@ -81,23 +81,19 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="relative py-16 px-4 sm:px-6 lg:px-8 bg-black overflow-hidden"
+      className="relative py-8 px-4 sm:px-6 lg:px-8 bg-black overflow-hidden"
     >
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-ted/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-ted/5 rounded-full blur-3xl -z-10" />
-
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-sm mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-4"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-white">Get In Touch</h2>
-          <p className="text-gray-400 text-sm">
-            Have questions? We'd love to hear from you
+          <h2 className="text-xl font-bold mb-1 text-white">Get In Touch</h2>
+          <p className="text-gray-400 text-xs">
+            Have questions? Contact us
           </p>
         </motion.div>
 
@@ -109,7 +105,7 @@ export default function Contact() {
         >
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4 bg-black/40 border border-ted/30 p-6 sm:p-8 rounded-xl"
+            className="space-y-2 bg-black/40 border border-ted/30 p-3 rounded-lg"
           >
             {isSubmitted && (
               <motion.div
@@ -123,65 +119,65 @@ export default function Contact() {
 
             {/* Name */}
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
+              <label className="block text-xs font-semibold text-gray-300 mb-0.5">
                 Your Name
               </label>
               <input
                 {...register("name")}
                 type="text"
                 placeholder="John Doe"
-                className="w-full px-3 py-2 rounded-lg bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all text-white placeholder-gray-500 text-sm"
+                className="w-full px-2 py-1 rounded-md bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all text-white placeholder-gray-500 text-xs"
               />
               {errors.name && (
-                <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
+                <p className="text-red-400 text-xs mt-0.5">{errors.name.message}</p>
               )}
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
+              <label className="block text-xs font-semibold text-gray-300 mb-0.5">
                 Email Address
               </label>
               <input
                 {...register("email")}
                 type="email"
                 placeholder="you@example.com"
-                className="w-full px-3 py-2 rounded-lg bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all text-white placeholder-gray-500 text-sm"
+                className="w-full px-2 py-1 rounded-md bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all text-white placeholder-gray-500 text-xs"
               />
               {errors.email && (
-                <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
+                <p className="text-red-400 text-xs mt-0.5">{errors.email.message}</p>
               )}
             </div>
 
             {/* Subject */}
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
+              <label className="block text-xs font-semibold text-gray-300 mb-0.5">
                 Subject
               </label>
               <input
                 {...register("subject")}
                 type="text"
                 placeholder="How can we help?"
-                className="w-full px-3 py-2 rounded-lg bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all text-white placeholder-gray-500 text-sm"
+                className="w-full px-2 py-1 rounded-md bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all text-white placeholder-gray-500 text-xs"
               />
               {errors.subject && (
-                <p className="text-red-400 text-xs mt-1">{errors.subject.message}</p>
+                <p className="text-red-400 text-xs mt-0.5">{errors.subject.message}</p>
               )}
             </div>
 
             {/* Message */}
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
+              <label className="block text-xs font-semibold text-gray-300 mb-0.5">
                 Message
               </label>
               <textarea
                 {...register("message")}
                 placeholder="Tell us what you're thinking..."
-                rows={3}
-                className="w-full px-3 py-2 rounded-lg bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all resize-none text-white placeholder-gray-500 text-sm"
+                rows={2}
+                className="w-full px-2 py-1 rounded-md bg-black/40 border border-ted/30 focus:outline-none focus:border-ted focus:ring-1 focus:ring-ted/50 transition-all resize-none text-white placeholder-gray-500 text-xs"
               />
               {errors.message && (
-                <p className="text-red-400 text-xs mt-1">{errors.message.message}</p>
+                <p className="text-red-400 text-xs mt-0.5">{errors.message.message}</p>
               )}
             </div>
 
@@ -191,7 +187,7 @@ export default function Contact() {
               disabled={isSubmitting}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full px-6 py-2 bg-ted text-white font-semibold rounded-lg hover:bg-ted-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+              className="w-full px-3 py-1 bg-ted text-white font-semibold rounded-md hover:bg-ted-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xs"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>

@@ -49,10 +49,9 @@ export default function Footer() {
               className="col-span-1"
             >
               <div className="flex items-center gap-2 mb-4">
-                <div className="text-2xl font-bold text-ted">TEDx</div>
-                <div className="flex flex-col">
-                  <span className="text-xs font-semibold">GeethanjaliCET</span>
-                  
+                <div className="text-2xl font-bold">
+                  <span className="text-ted">TEDx</span>
+                  <span className="text-white">Geethanjali CET</span>
                 </div>
               </div>
               <p className="text-gray-400 text-sm mb-6">
