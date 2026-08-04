@@ -52,12 +52,19 @@ export default function About() {
               >
                 {/* Title with smooth reveal */}
                 <motion.h3 
-                  className="text-2xl font-bold mb-4 text-ted"
+                  className="text-2xl font-bold mb-4"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: idx * 0.2 + 0.1 }}
                 >
-                  {section.title}
+                  {idx === 2 ? (
+                    <>
+                      <span className="text-ted">TEDx</span>
+                      <span className="text-white">Geethanjali CET</span>
+                    </>
+                  ) : (
+                    <span className="text-ted">{section.title}</span>
+                  )}
                 </motion.h3>
 
                 {/* Animated divider */}
