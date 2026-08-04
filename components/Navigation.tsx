@@ -62,10 +62,10 @@ export default function Navigation() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg sm:text-2xl font-bold text-ted whitespace-nowrap"
+              className="text-lg sm:text-2xl font-bold whitespace-nowrap"
             >
-              TEDx<span className="hidden sm:inline">Geethanjali CET</span>
-              <span className="sm:hidden">Geethanjali CET</span>
+              <span className="text-ted">TEDx</span><span className="hidden sm:inline text-white">Geethanjali CET</span>
+              <span className="sm:hidden text-white">Geethanjali CET</span>
             </motion.div>
           </Link>
 

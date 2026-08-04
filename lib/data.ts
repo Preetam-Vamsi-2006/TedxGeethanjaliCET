@@ -64,52 +64,32 @@ export const SPEAKERS = [
 export const SCHEDULE = [
   {
     id: 1,
-    time: "09:00 AM",
-    title: "Registration & Welcome",
+    time: "10:00 AM",
+    title: "Welcome & Opening",
   },
   {
     id: 2,
-    time: "09:30 AM",
-    title: "Opening",
+    time: "10:15 AM",
+    title: "Lamp Lighting",
   },
   {
     id: 3,
-    time: "10:00 AM",
-    title: "President Speech",
-  },
-  {
-    id: 4,
-    time: "11:00 AM",
+    time: "10:30 AM",
     title: "Vice Chairman Speech",
   },
   {
-    id: 5,
-    time: "11:15 AM",
+    id: 4,
+    time: "10:45 AM",
     title: "Team Reveal",
   },
   {
+    id: 5,
+    time: "11:00 AM",
+    title: "Agenda & Recruitment",
+  },
+  {
     id: 6,
-    time: "12:00 PM",
-    title: "Recruitments",
-  },
-  {
-    id: 7,
-    time: "01:00 PM",
-    title: "Rounds",
-  },
-  {
-    id: 8,
-    time: "02:00 PM",
-    title: "Announcements",
-  },
-  {
-    id: 9,
     time: "03:00 PM",
-    title: "Networking & Refreshments",
-  },
-  {
-    id: 10,
-    time: "04:00 PM",
     title: "Closing Remarks",
   },
 ];
