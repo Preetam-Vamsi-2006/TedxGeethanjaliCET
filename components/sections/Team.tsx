@@ -87,7 +87,7 @@ export default function Team() {
         name: "Saketh",
         role: "Curation Head",
         image: "/team/saketh.jpg",
-        social: { linkedin: "https://www.linkedin.com/in/saketh-rao-70165b306/", instagram: "" },
+        social: { linkedin: "https://www.linkedin.com/in/saketh-rao-70165b306/", instagram: "https://www.instagram.com/_sakethrao?igsh=MWp5b2lrMDRwdTAwbQ==" },
       },
       {
         id: 2,
@@ -103,7 +103,7 @@ export default function Team() {
         name: "Sam Benedict",
         role: "Logistics Lead",
         image: "/team/sam.JPG",
-        social: { linkedin: "#", instagram: "https://www.instagram.com/sapphireprince__/" },
+        social: { linkedin: "https://www.linkedin.com/in/sam-benedict-9b2082389?utm_source=share_via&utm_content=profile&utm_medium=member_android", instagram: "https://www.instagram.com/sapphireprince__/" },
       },
       {
         id: 2,

@@ -17,7 +17,7 @@ export const SITE_CONFIG = {
 // Event Data
 export const EVENT_DATA = {
   name: "TEDx Geethanjali 2024",
-  theme: "Spaces Between",
+  theme: "The Spaces Between",
   date: "2026-08-07",
   time: "10:00 AM",
   venue: "Main Auditorium, Geethanjali College",
@@ -230,9 +230,9 @@ export const ABOUT_TEDX_GCET = {
 
 // Event Theme
 export const EVENT_THEME = {
-  title: "Spaces Between",
+  title: "The Spaces Between",
   description:
-    "Our theme 'Spaces Between' explores the connections that exist in the gaps—between ideas, disciplines, and people. It represents the untapped potential in the spaces that separate us and how bridging these gaps can lead to unprecedented innovation and understanding.",
+    "Our theme 'The Spaces Between' explores the connections that exist in the gaps between ideas, disciplines, and people. It represents the untapped potential in the spaces that separate us and how bridging these gaps can lead to unprecedented innovation and understanding.",
   keyPoints: [
     "Connecting past wisdom with future innovation",
     "Building bridges between different disciplines",
