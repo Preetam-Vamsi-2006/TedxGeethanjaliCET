@@ -27,9 +27,6 @@ export default function Schedule() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-white">Event Schedule</h2>
-          <p className="text-white/60 mb-3 text-sm">
-            A day filled with inspiring talks, interactive sessions, and networking opportunities
-          </p>
           <div className="w-16 h-1 bg-ted mx-auto" />
         </motion.div>
 
@@ -53,12 +50,13 @@ export default function Schedule() {
                   <>
                     <div className="text-right pr-8">
                       <motion.div
-                        className="flex items-center justify-end gap-3"
+                        className="flex items-center justify-end gap-2"
                         whileHover={{ x: -5 }}
                       >
                         <span className="text-sm font-bold text-ted whitespace-nowrap">
                           {item.time}
                         </span>
+                        <span className="text-ted">-</span>
                         <h3 className="text-sm font-semibold text-white">
                           {item.title}
                         </h3>
@@ -74,15 +72,16 @@ export default function Schedule() {
                     <div />
                     <div className="text-left pl-8">
                       <motion.div
-                        className="flex items-center gap-3"
+                        className="flex items-center gap-2"
                         whileHover={{ x: 5 }}
                       >
-                        <h3 className="text-sm font-semibold text-white">
-                          {item.title}
-                        </h3>
                         <span className="text-sm font-bold text-ted whitespace-nowrap">
                           {item.time}
                         </span>
+                        <span className="text-ted">-</span>
+                        <h3 className="text-sm font-semibold text-white">
+                          {item.title}
+                        </h3>
                       </motion.div>
                     </div>
                   </>
