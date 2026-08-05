@@ -17,11 +17,11 @@ export const SITE_CONFIG = {
 // Event Data
 export const EVENT_DATA = {
   name: "TEDx Geethanjali 2024",
-  theme: "Bridging Tomorrow",
-  date: "2026-08-08",
-  time: "09:00 AM",
+  theme: "Spaces Between",
+  date: "2026-08-07",
+  time: "10:00 AM",
   venue: "Main Auditorium, Geethanjali College",
-  eventDate: new Date(2026, 7, 7), // August 8, 2026 (Note: month is 0-indexed, so 7 = August)
+  eventDate: new Date(2026, 7, 7, 10, 0, 0), // August 7, 2026 at 10:00 AM
 };
 
 // Speakers
@@ -218,7 +218,7 @@ export const ABOUT_TEDX = {
 export const ABOUT_TEDX_GCET = {
   title: "About TEDXGeethanjaliCET",
   description:
-    "TEDXGeethanjaliCET is an independently organized TED-like event celebrating innovative ideas from students, faculty, and community. We believe in the power of ideas to inspire change.",
+    "TEDxGeethanjali CET is an independently organized TED-like event celebrating innovative ideas from students, faculty, and community. We believe in the power of ideas to inspire change.",
   highlights: [
     "Student-led initiative",
     "Industry insights",
@@ -230,9 +230,9 @@ export const ABOUT_TEDX_GCET = {
 
 // Event Theme
 export const EVENT_THEME = {
-  title: "Bridging Tomorrow",
+  title: "Spaces Between",
   description:
-    "Our theme 'Bridging Tomorrow' represents the connection between today's ideas and tomorrow's innovations. It embodies our commitment to bridging gaps in technology, knowledge, and human connection to create a better future.",
+    "Our theme 'Spaces Between' explores the connections that exist in the gaps—between ideas, disciplines, and people. It represents the untapped potential in the spaces that separate us and how bridging these gaps can lead to unprecedented innovation and understanding.",
   keyPoints: [
     "Connecting past wisdom with future innovation",
     "Building bridges between different disciplines",

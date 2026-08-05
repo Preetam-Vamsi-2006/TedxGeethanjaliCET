@@ -87,45 +87,30 @@ export default function EventTheme() {
           </motion.div>
         </motion.div>
 
-        {/* Key points - same card style as About section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Key points - as normal text */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className="space-y-4"
+        >
           {EVENT_THEME.keyPoints.map((point, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7, delay: idx * 0.1, ease: "easeOut" }}
-              className="group"
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+              className="flex items-start gap-4"
             >
-              <motion.div
-                className="p-4 rounded-xl backdrop-blur-md bg-black border border-ted/50 hover:border-ted transition-all duration-500"
-                whileHover={{ 
-                  y: -4,
-                  boxShadow: "0 20px 50px rgba(230, 57, 70, 0.15)"
-                }}
-              >
-                {/* Animated divider */}
-                <motion.div
-                  className="h-0.5 w-8 bg-gradient-to-r from-ted to-ted-light mb-3 rounded"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: 32 }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 + 0.2 }}
-                />
-
-                {/* Content */}
-                <motion.p 
-                  className="text-white text-sm font-medium leading-tight"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 + 0.3 }}
-                >
-                  {point}
-                </motion.p>
-              </motion.div>
+              <div className="w-8 h-0.5 bg-gradient-to-r from-ted to-ted-light rounded mt-2 flex-shrink-0" />
+              <p className="text-white/80 leading-relaxed text-sm sm:text-base">
+                {point}
+              </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

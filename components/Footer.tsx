@@ -139,29 +139,9 @@ export default function Footer() {
             <p>
               &copy; {currentYear} TEDx Geethanjali College. All rights reserved.
             </p>
-            <div className="flex gap-6 mt-4 sm:mt-0">
-              <a href="#" className="hover:text-ted transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-ted transition-colors">
-                Terms & Conditions
-              </a>
-              <a href="#" className="hover:text-ted transition-colors">
-                Contact
-              </a>
-            </div>
           </motion.div>
 
-          {/* Credit */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center text-gray-500 text-xs mt-6"
-          >
-            Designed and developed with ❤️ | TEDx is an independently organized TED
-            event in the spirit of TED's mission to spread ideas worth spreading.
-          </motion.p>
+
         </div>
       </div>
 
