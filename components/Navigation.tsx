@@ -64,7 +64,7 @@ export default function Navigation() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg sm:text-2xl font-bold whitespace-nowrap"
             >
-              <span style={{ color: '#E0272C' }}>TEDx</span><span className="hidden sm:inline text-white">Geethanjali CET</span>
+              <span style={{ color: '#E0272C' }} className="hidden sm:inline">TEDx</span><span className="hidden sm:inline text-white">Geethanjali CET</span>
               <span style={{ color: '#E0272C' }} className="sm:hidden">TEDx</span><span className="sm:hidden text-white">Geethanjali CET</span>
             </motion.div>
           </Link>
