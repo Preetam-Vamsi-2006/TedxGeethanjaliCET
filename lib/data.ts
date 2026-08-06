@@ -233,10 +233,5 @@ export const EVENT_THEME = {
   title: "The Spaces Between",
   description:
     "Our theme 'The Spaces Between' explores the connections that exist in the gaps between ideas, disciplines, and people. It represents the untapped potential in the spaces that separate us and how bridging these gaps can lead to unprecedented innovation and understanding.",
-  keyPoints: [
-    "Connecting past wisdom with future innovation",
-    "Building bridges between different disciplines",
-    "Creating opportunities for cross-sector collaboration",
-    "Inspiring the next generation of leaders",
-  ],
+  keyPoints: [],
 };

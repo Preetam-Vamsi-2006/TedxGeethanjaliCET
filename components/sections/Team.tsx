@@ -38,7 +38,8 @@ export default function Team() {
     faculty: [
       {
         id: 1,
-        name: "Ms.Preeti Prasada(Senior Assistant Professor)",
+        name: "Ms. Preeti Prasada",
+        profession: "Senior Assistant Professor",
         role: "Faculty Co-ordinator",
         image: "/team/faculty.JPG",
         social: { linkedin: "https://www.linkedin.com/in/preeti-prasada-gcet-6648232a2?utm_source=share_via&utm_content=profile&utm_medium=member_android", instagram: "" },
@@ -199,6 +200,11 @@ export default function Team() {
                   <h3 className="text-lg font-bold text-white mb-1 mt-auto">
                     {member.name}
                   </h3>
+                  {(member as any).profession && (
+                    <p className="text-white/60 text-sm mb-3">
+                      {(member as any).profession}
+                    </p>
+                  )}
                   <p className="text-ted text-sm font-semibold mb-4">
                     {member.role}
                   </p>
