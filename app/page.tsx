@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -14,8 +14,11 @@ import SmoothScroll from "@/components/SmoothScroll";
 import ParticleBackground from "@/components/ParticleBackground";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import BackToTop from "@/components/BackToTop";
+import LaunchCountdown from "@/components/LaunchCountdown";
 
 export default function Home() {
+  const [countdownComplete, setCountdownComplete] = useState(false);
+
   useEffect(() => {
     // Prevent auto-scroll to hash on page load
     window.history.replaceState(null, '', window.location.pathname);
@@ -23,28 +26,31 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative w-full overflow-hidden bg-black">
-        <SmoothScroll>
-          <ParticleBackground />
-          <ScrollProgressBar />
+      <LaunchCountdown onComplete={() => setCountdownComplete(true)} />
+      {countdownComplete && (
+        <div className="relative w-full overflow-hidden bg-black">
+          <SmoothScroll>
+            <ParticleBackground />
+            <ScrollProgressBar />
 
-          <Navigation />
+            <Navigation />
 
-          <main className="relative">
-            <Hero />
-            <About />
-            <EventTheme />
-            <Schedule />
-            <CountdownTimer />
-            <Team />
-            <Contact />
-          </main>
+            <main className="relative">
+              <Hero />
+              <About />
+              <EventTheme />
+              <Schedule />
+              <CountdownTimer />
+              <Team />
+              <Contact />
+            </main>
 
-          <Footer />
-        </SmoothScroll>
+            <Footer />
+          </SmoothScroll>
 
-        <BackToTop />
-      </div>
+          <BackToTop />
+        </div>
+      )}
     </>
   );
 }

@@ -21,7 +21,7 @@ export const EVENT_DATA = {
   date: "2026-08-07",
   time: "10:00 AM",
   venue: "Main Auditorium, Geethanjali College",
-  eventDate: new Date(2026, 7, 7, 10, 0, 0), // August 7, 2026 at 10:00 AM
+  eventDate: new Date(2026, 7, 7), // August 7, 2026 - shows 0:0:0:0 today
 };
 
 // Speakers
@@ -64,33 +64,68 @@ export const SPEAKERS = [
 export const SCHEDULE = [
   {
     id: 1,
-    time: "10:00 AM",
-    title: "Welcome & Opening",
+    time: "10:00 - 10:10 AM",
+    title: "Intro",
   },
   {
     id: 2,
-    time: "10:15 AM",
-    title: "Lamp Lighting",
+    time: "10:10 - 10:20 AM",
+    title: "Organizer Speech",
   },
   {
     id: 3,
-    time: "10:30 AM",
-    title: "Vice Chairman Speech",
+    time: "10:20 - 10:30 AM",
+    title: "Faculty Coordinator Speech",
   },
   {
     id: 4,
-    time: "10:45 AM",
-    title: "Team Reveal",
+    time: "10:30 - 10:40 AM",
+    title: "Theme Reveal ",
   },
   {
     id: 5,
-    time: "11:00 AM",
-    title: "Agenda & Recruitment",
+    time: "10:40 - 10:50 AM",
+    title: "Website Launch ",
   },
   {
     id: 6,
-    time: "03:00 PM",
-    title: "Closing Remarks",
+    time: "10:50 - 11:05 AM",
+    title: "Team Reveal",
+  },
+  {
+    id: 7,
+    time: "11:05 - 11:10 AM",
+    title: "Briefing About Domains",
+  },
+  {
+    id: 8,
+    time: "11:10 - 11:20 AM",
+    title: "Instructions for Recruitments",
+  },
+  {
+    id: 9,
+    time: "11:20 - 11:30 AM",
+    title: "Vote of Thanks",
+  },
+  {
+    id: 10,
+    time: "12:00 - 12:40 PM",
+    title: "Panel Discussion - Slot 1",
+  },
+  {
+    id: 11,
+    time: "1:00 - 1:40 PM",
+    title: "Panel Discussion - Slot 2",
+  },
+  {
+    id: 12,
+    time: "1:40 - 2:20 PM",
+    title: "Panel Discussion - Slot 3",
+  },
+  {
+    id: 13,
+    time: "2:20 - 3:00 PM",
+    title: "Panel Discussion - Slot 4",
   },
 ];
 
