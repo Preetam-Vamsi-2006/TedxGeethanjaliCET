@@ -54,7 +54,7 @@ export default function RegistrationClosedModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 flex items-center justify-center z-[301] p-4 sm:pt-64"
+            className="fixed inset-0 flex items-center justify-center z-[301] p-4 pt-32 sm:pt-64"
           >
             <div className="bg-gradient-to-br from-black to-black/80 border border-ted/50 rounded-xl shadow-2xl overflow-hidden w-full max-w-md">
               {/* Header */}
