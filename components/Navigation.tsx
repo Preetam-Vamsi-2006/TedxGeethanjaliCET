@@ -29,20 +29,10 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const nav = document.querySelector("nav");
-      if (nav && !nav.contains(e.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("click", handleClickOutside);
-      return () => document.removeEventListener("click", handleClickOutside);
-    }
-  }, [isOpen]);
+  const handleShowRegistrationModal = () => {
+    setIsOpen(false); // Close mobile menu
+    setShowRegistrationModal(true);
+  };
 
   return (
     <motion.nav
@@ -91,7 +81,7 @@ export default function Navigation() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setShowRegistrationModal(true)}
+            onClick={handleShowRegistrationModal}
             className="hidden md:block px-4 lg:px-6 py-2 bg-ted text-white rounded-lg font-semibold text-sm hover:bg-ted-dark transition-colors"
           >
             Register
@@ -130,7 +120,7 @@ export default function Navigation() {
               </Link>
             ))}
             <button 
-              onClick={() => setShowRegistrationModal(true)}
+              onClick={handleShowRegistrationModal}
               className="mx-4 mt-2 px-4 py-3 bg-ted text-white rounded-lg font-semibold text-sm hover:bg-ted-dark transition-colors w-auto">
               Register
             </button>
