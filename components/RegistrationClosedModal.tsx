@@ -45,7 +45,7 @@ export default function RegistrationClosedModal({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/50 z-[200]"
+            className="fixed inset-0 bg-black/50 z-[300]"
           />
 
           {/* Modal */}
@@ -54,7 +54,7 @@ export default function RegistrationClosedModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md z-[201] mx-4"
+            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md z-[301] mx-4"
           >
             <div className="bg-gradient-to-br from-black to-black/80 border border-ted/50 rounded-xl shadow-2xl overflow-hidden">
               {/* Header */}
