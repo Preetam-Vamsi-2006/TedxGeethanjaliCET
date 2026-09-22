@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import RegistrationClosedModal from "./RegistrationClosedModal";
 
 const navItems = [
   { label: "Home", href: "#hero" },
@@ -17,6 +18,7 @@ const navItems = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,7 +91,7 @@ export default function Navigation() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.open("https://forms.gle/UEScTorBomNC79JL7", "_blank")}
+            onClick={() => setShowRegistrationModal(true)}
             className="hidden md:block px-4 lg:px-6 py-2 bg-ted text-white rounded-lg font-semibold text-sm hover:bg-ted-dark transition-colors"
           >
             Register
@@ -128,13 +130,19 @@ export default function Navigation() {
               </Link>
             ))}
             <button 
-              onClick={() => window.open("https://forms.gle/UEScTorBomNC79JL7", "_blank")}
+              onClick={() => setShowRegistrationModal(true)}
               className="mx-4 mt-2 px-4 py-3 bg-ted text-white rounded-lg font-semibold text-sm hover:bg-ted-dark transition-colors w-auto">
               Register
             </button>
           </div>
         </motion.div>
       </div>
+
+      {/* Registration Closed Modal */}
+      <RegistrationClosedModal
+        isOpen={showRegistrationModal}
+        onClose={() => setShowRegistrationModal(false)}
+      />
     </motion.nav>
   );
 }

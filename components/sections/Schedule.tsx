@@ -30,69 +30,44 @@ export default function Schedule() {
           <div className="w-16 h-1 bg-ted mx-auto" />
         </motion.div>
 
-        {/* Timeline */}
-        <div ref={containerRef} className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-ted via-ted-dark to-ted -translate-x-1/2" />
-
-          {/* Timeline items */}
-          <div className="space-y-12">
-            {SCHEDULE.map((item, idx) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.05 }}
-                className="grid grid-cols-2 gap-4 items-center relative"
-              >
-                {/* Left side - even indices */}
-                {idx % 2 === 0 && (
-                  <>
-                    <div className="text-right pr-8">
-                      <motion.div
-                        className="flex items-center justify-end gap-2"
-                        whileHover={{ x: -5 }}
-                      >
-                        <span className="text-sm font-bold text-ted whitespace-nowrap">
-                          {item.time}
-                        </span>
-                        <span className="text-ted">-</span>
-                        <h3 className="text-sm font-semibold text-white">
-                          {item.title}
-                        </h3>
-                      </motion.div>
-                    </div>
-                    <div />
-                  </>
-                )}
-
-                {/* Right side - odd indices */}
-                {idx % 2 !== 0 && (
-                  <>
-                    <div />
-                    <div className="text-left pl-8">
-                      <motion.div
-                        className="flex items-center gap-2"
-                        whileHover={{ x: 5 }}
-                      >
-                        <span className="text-sm font-bold text-ted whitespace-nowrap">
-                          {item.time}
-                        </span>
-                        <span className="text-ted">-</span>
-                        <h3 className="text-sm font-semibold text-white">
-                          {item.title}
-                        </h3>
-                      </motion.div>
-                    </div>
-                  </>
-                )}
-
-                {/* Timeline dot - centered */}
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-ted rounded-full ring-4 ring-white z-10" />
-              </motion.div>
-            ))}
+        {/* Placeholder Message */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex flex-col items-center justify-center py-12 px-6 bg-gradient-to-br from-ted/5 to-ted/10 border border-ted/30 rounded-xl"
+        >
+          <div className="w-16 h-16 bg-ted/20 rounded-full flex items-center justify-center mb-4 border border-ted/40">
+            <svg
+              className="w-8 h-8 text-ted"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
           </div>
-        </div>
+          <h3 className="text-2xl font-bold text-white mb-2">Schedule Coming Soon</h3>
+          <p className="text-white/60 text-center max-w-md">
+            The detailed event schedule will be updated soon. Stay tuned for exciting sessions,
+            speakers, and activities at TEDx Geethanjali CET!
+          </p>
+          <motion.div
+            className="mt-6 flex gap-2"
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <div className="w-2 h-2 bg-ted rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-ted rounded-full animate-pulse delay-100" />
+            <div className="w-2 h-2 bg-ted rounded-full animate-pulse delay-200" />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
