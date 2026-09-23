@@ -7,7 +7,6 @@ import About from "@/components/sections/About";
 import EventTheme from "@/components/sections/EventTheme";
 import Schedule from "@/components/sections/Schedule";
 import Team from "@/components/sections/Team";
-import PaymentRegistration from "@/components/sections/PaymentRegistration";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -42,7 +41,6 @@ export default function Home() {
           <EventTheme />
           <Schedule />
           <Team />
-          <PaymentRegistration />
           <Contact />
         </main>
 
