@@ -115,7 +115,7 @@ export default function RegistrationClosedModal({
               </div>
 
               {/* Footer */}
-              <div className="bg-black/40 border-t border-ted/20 px-4 sm:px-6 py-3 flex gap-2 justify-center sm:justify-end">
+              <div className="bg-black/40 border-t border-ted/20 px-4 sm:px-6 py-3 flex justify-center">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -123,14 +123,6 @@ export default function RegistrationClosedModal({
                   className="px-4 py-2 text-white/60 hover:text-white text-xs sm:text-sm transition-colors"
                 >
                   Close
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={handleBookTickets}
-                  className="px-6 py-2 bg-ted text-white font-semibold rounded-lg hover:bg-red-700 transition-colors text-xs sm:text-sm"
-                >
-                  Register
                 </motion.button>
               </div>
             </div>
