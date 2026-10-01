@@ -14,6 +14,7 @@ import ParticleBackground from "@/components/ParticleBackground";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import BackToTop from "@/components/BackToTop";
 import BookTicketsCTA from "@/components/BookTicketsCTA";
+import TicketsOpenAnnouncement from "@/components/TicketsOpenAnnouncement";
 import RegistrationClosedModal from "@/components/RegistrationClosedModal";
 
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
         <ScrollProgressBar />
 
         <Navigation />
+
+        {/* Tickets Open Announcement - Shows on page load */}
+        <TicketsOpenAnnouncement onBookNow={() => setShowRegistrationModal(true)} />
 
         {/* Book Tickets CTA */}
         <BookTicketsCTA onOpen={() => setShowRegistrationModal(true)} />
