@@ -29,7 +29,7 @@ const SPEAKERS: Speaker[] = [
   {
     id: 4,
     name: "Bhagavathi",
-    image: "/speakers/speaker4.PNG",
+    image: "/speakers/speaker4.png",
   },
   {
     id: 5,
