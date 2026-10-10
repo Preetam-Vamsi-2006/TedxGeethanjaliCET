@@ -6,6 +6,8 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import EventTheme from "@/components/sections/EventTheme";
 import Schedule from "@/components/sections/Schedule";
+import Speakers from "@/components/sections/Speakers";
+import Transportation from "@/components/sections/Transportation";
 import Team from "@/components/sections/Team";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
@@ -44,6 +46,8 @@ export default function Home() {
           <About />
           <EventTheme />
           <Schedule />
+          <Speakers />
+          <Transportation />
           <Team />
           <Contact />
         </main>
