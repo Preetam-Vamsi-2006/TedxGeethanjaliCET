@@ -23,7 +23,7 @@ const SPEAKERS: Speaker[] = [
   },
   {
     id: 3,
-    name: "Sameeksha Seerum",
+    name: "Sameeksha Seeram",
     image: "/speakers/speaker3.png",
   },
   {
